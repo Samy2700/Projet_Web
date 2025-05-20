@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation et visibilité des jeunes - Un même ballon, des chances inégales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">⚽</div>
+                <span>Un Même Ballon</span>
+            </a>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav>
+                 <ul>
+                    <li><a href="Accueil.html">Accueil</a></li>
+                    <li><a href="Disparites_pays.html">Disparités</a></li>
+                    <li><a href="Formation_Jeunes .html">Formation</a></li>
+                    <li><a href="Grandes_Compétitions.html">Compétitions</a></li>
+                    <li><a href="Initiatives.html">Initiatives</a></li>
+                    <li><a href="Apropos.html">À propos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-secondary">
+        <div class="container hero-content">
+            <h1>Formation et visibilité des jeunes</h1>
+            <p>Explorer les différences dans les systèmes de formation, la détection de talents et les opportunités offertes aux jeunes footballeurs à travers le monde.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Carte des académies</h2>
+            <p>Découvrez les principales académies de football dans le monde et leur niveau d'équipement.</p>
+            
+            <div class="academies-map">
+                <div class="map-container">
+                    <!-- Points sur la carte représentant les académies -->
+                    <div class="map-point" style="top: 30%; left: 48%;" data-academy="clairefontaine"></div>
+                    <div class="map-point" style="top: 32%; left: 45%;" data-academy="lamasiabarcelone"></div>
+                    <div class="map-point premium" style="top: 32%; left: 52%;" data-academy="juventus"></div>
+                    <div class="map-point" style="top: 28%; left: 49%;" data-academy="ajax"></div>
+                    <div class="map-point" style="top: 27%; left: 44%;" data-academy="manchesterunited"></div>
+                    <div class="map-point" style="top: 40%; left: 38%;" data-academy="aspire"></div>
+                    <div class="map-point" style="top: 55%; left: 42%;" data-academy="diambarsenegal"></div>
+                    <div class="map-point" style="top: 55%; left: 57%;" data-academy="jomokenya"></div>
+                    <div class="map-point" style="top: 45%; left: 85%;" data-academy="jleague"></div>
+                    <div class="map-point" style="top: 37%; left: 14%;" data-academy="monterrey"></div>
+                    <div class="map-point premium" style="top: 65%; left: 30%;" data-academy="flamengo"></div>
+                    
+                    <!-- Popup d'information sur l'académie -->
+                    <div class="academy-popup" id="academyPopup">
+                        <div class="popup-header">
+                            <h3 class="popup-title">Clairefontaine</h3>
+                            <button class="popup-close">&times;</button>
+                        </div>
+                        <div class="popup-content">
+                            <div class="popup-image">
+                                <img src="/api/placeholder/400/200" alt="Académie">
+                            </div>
+                            <div class="popup-info">
+                                <p><strong>Pays:</strong> France</p>
+                                <p><strong>Fondation:</strong> 1988</p>
+                                <p><strong>Type:</strong> Centre National</p>
+                                <p><strong>Budget annuel:</strong> 15 millions €</p>
+                            </div>
+                            <div class="popup-description">
+                                <p>L'INF Clairefontaine est le centre technique national du football français. Il accueille les meilleurs jeunes talents du pays et leur offre un encadrement de haut niveau pour développer leur potentiel.</p>
+                            </div>
+                            <div class="success-stories">
+                                <p>Joueurs formés: Kylian Mbappé, Thierry Henry, Nicolas Anelka, Louis Saha...</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contrôles de carte -->
+                    <div class="map-controls">
+                        <div class="map-filter">
+                            <label>
+                                <input type="checkbox" checked id="showAll">
+                                <span>Toutes les académies</span>
+                            </label>
+                        </div>
+                        <div class="map-filter">
+                            <label>
+                                <input type="checkbox" checked id="showPremium">
+                                <span>Académies premium</span>
+                            </label>
+                        </div>
+                        <div class="map-filter">
+                            <label>
+                                <input type="checkbox" checked id="showStandard">
+                                <span>Académies standard</span>
+                            </label>
+                        </div>
+                        <div class="map-legend">
+                            <div class="legend-item">
+                                <div class="legend-color standard"></div>
+                                <span>Académie standard</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color premium"></div>
+                                <span>Académie premium</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Histoires de réussite</h2>
+            <p>Des parcours inspirants de jeunes talents qui ont réussi malgré les obstacles.</p>
+            
+            <div class="success-story">
+                <div class="story-image">
+                    <img src="/api/placeholder/400/500" alt="Portrait de joueur">
+                </div>
+                <div class="story-content">
+                    <h3 class="story-title">Sadio Mané</h3>
+                    <div class="story-quote">
+                        <p>"J'ai dû fuir ma maison pour poursuivre mon rêve. Mes parents ne voulaient pas que je joue au football. Je n'avais pas de chaussures, pas d'équipement, mais j'avais la détermination."</p>
+                    </div>
+                    <div class="story-details">
+                        <p>Né dans un petit village du Sénégal, Sadio Mané a dû surmonter d'immenses obstacles pour devenir footballeur professionnel. Sans accès à une académie structurée ou à un soutien institutionnel, il a été repéré lors d'un tournoi local par un recruteur qui l'a fait venir en France.</p>
+                        <p>Aujourd'hui, il est considéré comme l'un des meilleurs joueurs du monde et sert d'inspiration à des milliers de jeunes au Sénégal et en Afrique. Il investit dans son pays d'origine, construisant des écoles et des infrastructures sportives pour que les prochains talents aient plus de facilité à émerger.</p>
+                    </div>
+                    <div class="story-stats">
+                        <div class="stat-box">
+                            <div class="number">16</div>
+                            <div class="label">Âge du départ</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">2</div>
+                            <div class="label">Académies créées</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">4M€</div>
+                            <div class="label">Investis au Sénégal</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Comparaison des systèmes de formation</h2>
+            <p>Les différences entre les systèmes de formation en Europe et en Afrique.</p>
+            
+            <div class="comparison-container">
+                <div class="comparison-slider">
+                    <div class="comparison-after">
+                        <div class="comparison-after-img"></div>
+                        <div class="comparison-label after-label">Europe</div>
+                    </div>
+                    <div class="comparison-before">
+                        <div class="comparison-before-img"></div>
+                        <div class="comparison-label before-label">Afrique</div>
+                    </div>
+                    <div class="comparison-handle"></div>
+                </div>
+                
+                <div class="comparison-info">
+                    <div class="comparison-col col-1">
+                        <h3>Formation en Europe</h3>
+                        <p>Les académies européennes bénéficient de moyens considérables et d'une structure professionnelle complète.</p>
+                        <ul>
+                            <li>Infrastructures modernes et entretenues</li>
+                            <li>Suivi médical et nutritionnel personnalisé</li>
+                            <li>Staff technique complet et qualifié</li>
+                            <li>Encadrement scolaire intégré</li>
+                            <li>Compétitions régulières de haut niveau</li>
+                            <li>Visibilité médiatique et scouting structuré</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-col col-2">
+                        <h3>Formation en Afrique</h3>
+                        <p>Les académies africaines font face à de nombreux défis, malgré un formidable vivier de talents.</p>
+                        <ul>
+                            <li>Infrastructures limitées et difficiles à entretenir</li>
+                            <li>Suivi médical et nutritionnel minimal</li>
+                            <li>Manque d'encadrement technique qualifié</li>
+                            <li>Difficultés à concilier études et football</li>
+                            <li>Manque de compétitions régulières</li>
+                            <li>Visibilité réduite pour les recruteurs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Partagez votre expérience</h2>
+            <p>Vous avez vécu ou observé les inégalités dans la formation des jeunes footballeurs ? Partagez votre histoire.</p>
+            
+            <form class="share-story-form" id="shareStoryForm">
+                <div class="form-intro">
+                    <h3>Votre témoignage</h3>
+                    <p>Vos récits nous aident à documenter et à sensibiliser sur les disparités dans le football. Tous les témoignages sont précieux.</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Votre nom (ou pseudonyme)</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="country">Pays concerné</label>
+                    <input type="text" class="form-control" id="country" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="role">Votre rôle</label>
+                    <select class="form-control" id="role" required>
+                        <option value="">Sélectionnez votre rôle</option>
+                        <option value="player">Joueur/Joueuse</option>
+                        <option value="coach">Entraîneur</option>
+                        <option value="parent">Parent</option>
+                        <option value="observer">Observateur</option>
+                        <option value="other">Autre</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="story">Votre histoire</label>
+                    <textarea class="form-control" id="story" rows="5" required></textarea>
+                    <div class="form-note">Décrivez votre expérience, les défis rencontrés, les inégalités observées...</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="challenges">Principaux défis rencontrés</label>
+                    <select class="form-control" id="challenges" multiple>
+                        <option value="infrastructure">Manque d'infrastructures</option>
+                        <option value="equipment">Manque d'équipement</option>
+                        <option value="coaching">Manque d'encadrement technique</option>
+                        <option value="medical">Manque de suivi médical</option>
+                        <option value="education">Difficultés à concilier études et sport</option>
+                        <option value="visibility">Manque de visibilité/détection</option>
+                        <option value="financial">Obstacles financiers</option>
+                    </select>
+                    <div class="form-note">Maintenez Ctrl (ou Cmd) pour sélectionner plusieurs options</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email (facultatif)</label>
+                    <input type="email" class="form-control" id="email">
+                    <div class="form-note">Pour être éventuellement recontacté pour un témoignage plus complet</div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn">Soumettre mon témoignage</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Un Même Ballon</h3>
+                    <p>Explorez les inégalités dans le monde du football et les initiatives qui cherchent à créer un terrain de jeu plus équitable pour tous.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                     <ul>
+                        <li><a href="Accueil.html">Accueil</a></li>
+                        <li><a href="Disparites_pays.html">Disparités</a></li>
+                        <li><a href="Formation_Jeunes .html">Formation</a></li>
+                        <li><a href="Grandes_Compétitions.html">Compétitions</a></li>
+                        <li><a href="Initiatives.html">Initiatives</a></li>
+                        <li><a href="Apropos.html">À propos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="#">Sources</a></li>
+                        <li><a href="#">Organisations</a></li>
+                        <li><a href="#">Statistiques</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Un Même Ballon. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/Javascript/formation.js"></script>
+</body>
+</html>

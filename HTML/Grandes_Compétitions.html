@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accès aux grandes compétitions - Un même ballon, des chances inégales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">⚽</div>
+                <span>Un Même Ballon</span>
+            </a>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Accueil.html">Accueil</a></li>
+                     <li><a href="Disparites_pays.html">Disparités</a></li>
+                    <li><a href="Formation_Jeunes .html">Formation</a></li>
+                     <li><a href="Grandes_Compétitions.html">Compétitions</a></li>
+                    <li><a href="Initiatives.html">Initiatives</a></li>
+                    <li><a href="Apropos.html">À propos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-secondary">
+        <div class="container hero-content">
+            <h1>Accès aux grandes compétitions</h1>
+            <p>Explorez les obstacles et les inégalités qui existent dans le parcours de qualification pour les tournois internationaux.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Systèmes de qualification</h2>
+            <p>Les parcours de qualification varient considérablement selon les continents, créant des disparités significatives.</p>
+            
+            <div class="qualification-system">
+                <div class="continental-tabs">
+                    <button class="tab-button active" data-tab="europe">Europe</button>
+                    <button class="tab-button" data-tab="afrique">Afrique</button>
+                    <button class="tab-button" data-tab="asie">Asie</button>
+                    <button class="tab-button" data-tab="amerique">Amérique du Sud</button>
+                    <button class="tab-button" data-tab="concacaf">Amérique du Nord</button>
+                    <button class="tab-button" data-tab="oceanie">Océanie</button>
+                </div>
+                
+                <div class="tab-content active" id="europe">
+                    <h3 class="continent-title">Qualification en Europe (UEFA)</h3>
+                    <p>L'Europe dispose du système de qualification le plus avantageux, avec un grand nombre de places garanties.</p>
+                    
+                    <div class="qualification-steps">
+                        <div class="step">
+                            <div class="step-title">Phase de groupes</div>
+                            <p>Les équipes sont réparties en 10 groupes. Les vainqueurs de chaque groupe se qualifient directement pour la Coupe du Monde.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-title">Barrages</div>
+                            <p>Les 10 deuxièmes de groupe, rejoints par les 2 meilleures équipes de la Ligue des Nations non qualifiées, s'affrontent en 3 mini-tournois. Les vainqueurs de ces 3 tournois se qualifient.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="qualification-footer">
+                        <p>Résultat: 13 places sur 32 équipes en Coupe du Monde, soit environ 40% des places pour un continent représentant seulement 10% de la population mondiale.</p>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="afrique">
+                    <h3 class="continent-title">Qualification en Afrique (CAF)</h3>
+                    <p>L'Afrique dispose d'un système de qualification difficile avec peu de places au regard du nombre de pays.</p>
+                    
+                    <div class="qualification-steps">
+                        <div class="step">
+                            <div class="step-title">Tour préliminaire</div>
+                            <p>Les équipes les moins bien classées s'affrontent en matchs aller-retour pour accéder au second tour.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-title">Phase de groupes</div>
+                            <p>40 équipes sont réparties en 10 groupes de 4. Seuls les vainqueurs de groupe accèdent au tour suivant.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-title">Tour final</div>
+                            <p>Les 10 vainqueurs de groupe s'affrontent en 5 confrontations aller-retour. Les 5 vainqueurs se qualifient pour la Coupe du Monde.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="qualification-footer">
+                        <p>Résultat: Seulement 5 places sur 32 pour un continent de 54 pays représentant 17% de la population mondiale.</p>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="asie">
+                    <h3 class="continent-title">Qualification en Asie (AFC)</h3>
+                    <p>L'Asie a un parcours complexe avec plusieurs tours et peu de places pour le continent le plus peuplé.</p>
+                    
+                    <div class="qualification-steps">
+                        <div class="step">
+                            <div class="step-title">Premier tour</div>
+                            <p>Les équipes les moins bien classées s'affrontent en matchs aller-retour.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-title">Deuxième tour</div>
+                            <p>40 équipes réparties en 8 groupes de 5. Les 8 vainqueurs et les 4 meilleurs deuxièmes avancent.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-title">Troisième tour</div>
+                            <p>12 équipes réparties en 2 groupes de 6. Les 2 premiers de chaque groupe se qualifient directement.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-title">Quatrième tour</div>
+                            <p>Les deux équipes classées troisièmes s'affrontent. Le vainqueur participe à un barrage intercontinental.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="qualification-footer">
+                        <p>Résultat: 4,5 places pour un continent représentant 60% de la population mondiale.</p>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="amerique">
+                    <h3 class="continent-title">Qualification en Amérique du Sud (CONMEBOL)</h3>
+                    <p>L'Amérique du Sud bénéficie d'un système relativement favorable par rapport à sa population.</p>
+                    
+                    <div class="qualification-steps">
+                        <div class="step">
+                            <div class="step-title">Système de ligue</div>
+                            <p>Les 10 équipes sud-américaines s'affrontent toutes en matchs aller-retour (18 matchs par équipe).</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-title">Qualification directe</div>
+                            <p>Les 4 premiers du classement se qualifient directement pour la Coupe du Monde.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-title">Barrage</div>
+                            <p>L'équipe classée 5e participe à un barrage intercontinental.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="qualification-footer">
+                        <p>Résultat: 4,5 places pour seulement 10 pays, soit un ratio très favorable par rapport aux autres confédérations.</p>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="concacaf">
+                    <h3 class="continent-title">Qualification en Amérique du Nord (CONCACAF)</h3>
+                    <p>La CONCACAF utilise un système à plusieurs niveaux qui favorise les équipes les mieux classées.</p>
+                    
+                    <div class="qualification-steps">
+                        <div class="step">
+                            <div class="step-title">Premier tour</div>
+                            <p>30 équipes réparties en 6 groupes de 5. Seuls les vainqueurs de groupe avancent.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-title">Deuxième tour</div>
+                            <p>Les 6 vainqueurs de groupe s'affrontent en 3 duels aller-retour.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-title">Tour final (Hexagonal)</div>
+                            <p>Les 3 vainqueurs rejoignent les 3 meilleures équipes de la région dans une poule à 6. Les 3 premières équipes se qualifient directement, la 4e dispute un barrage intercontinental.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="qualification-footer">
+                        <p>Résultat: 3,5 places pour 35 pays, un ratio relativement favorable comparé à l'Afrique ou l'Asie.</p>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="oceanie">
+                    <h3 class="continent-title">Qualification en Océanie (OFC)</h3>
+                    <p>L'Océanie est la seule confédération sans place garantie directe à la Coupe du Monde.</p>
+                    
+                    <div class="qualification-steps">
+                        <div class="step">
+                            <div class="step-title">Phase de groupes</div>
+                            <p>Les équipes sont réparties en groupes. Les meilleures équipes se qualifient pour la phase à élimination directe.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-title">Phase à élimination directe</div>
+                            <p>Les équipes qualifiées s'affrontent en matchs à élimination directe pour déterminer le champion d'Océanie.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-title">Barrage intercontinental</div>
+                            <p>Le champion d'Océanie doit disputer un barrage intercontinental pour espérer se qualifier pour la Coupe du Monde.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="qualification-footer">
+                        <p>Résultat: 0,5 place pour 14 pays, ce qui rend la qualification extrêmement difficile pour les nations océaniennes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Simulateur de qualification</h2>
+            <p>Choisissez un pays et découvrez ses chances de qualification à la Coupe du Monde.</p>
+            
+            <div class="qualification-simulator">
+                <div class="simulator-intro">
+                    <h3>Sélectionnez un pays pour analyser son parcours de qualification</h3>
+                    <p>Cet outil vous montrera les obstacles spécifiques et les probabilités de qualification selon le pays choisi.</p>
+                </div>
+                
+                <div class="simulator-grid">
+                    <div class="team-card" data-team="france">
+                        <div class="team-flag"></div>
+                        <div class="team-info">
+                            <div class="team-name">France</div>
+                            <div class="team-rank">FIFA: #2</div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card" data-team="senegal">
+                        <div class="team-flag"></div>
+                        <div class="team-info">
+                            <div class="team-name">Sénégal</div>
+                            <div class="team-rank">FIFA: #20</div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card" data-team="japon">
+                        <div class="team-flag"></div>
+                        <div class="team-info">
+                            <div class="team-name">Japon</div>
+                            <div class="team-rank">FIFA: #17</div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card" data-team="equateur">
+                        <div class="team-flag"></div>
+                        <div class="team-info">
+                            <div class="team-name">Équateur</div>
+                            <div class="team-rank">FIFA: #31</div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card" data-team="panama">
+                        <div class="team-flag"></div>
+                        <div class="team-info">
+                            <div class="team-name">Panama</div>
+                            <div class="team-rank">FIFA: #63</div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card" data-team="fidji">
+                        <div class="team-flag"></div>
+                        <div class="team-info">
+                            <div class="team-name">Fidji</div>
+                            <div class="team-rank">FIFA: #161</div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card" data-team="haiti">
+                        <div class="team-flag"></div>
+                        <div class="team-info">
+                            <div class="team-name">Haïti</div>
+                            <div class="team-rank">FIFA: #94</div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card" data-team="burkina">
+                        <div class="team-flag"></div>
+                        <div class="team-info">
+                            <div class="team-name">Burkina Faso</div>
+                            <div class="team-rank">FIFA: #53</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn" id="simulateBtn" disabled>Analyser les chances</button>
+                
+                <div class="simulator-results" id="simulatorResults">
+                    <h3 class="result-title">Analyse: Sénégal</h3>
+                    
+                    <div class="result-card">
+                        <div class="result-heading">Parcours de qualification</div>
+                        <p class="result-explanation">Le Sénégal doit passer par un parcours complexe en trois étapes, avec une compétition féroce pour seulement 5 places attribuées à toute l'Afrique.</p>
+                        
+                        <div class="result-stat">
+                            <div class="stat-name">Nombre d'étapes de qualification</div>
+                            <div class="stat-value">3</div>
+                        </div>
+                        <div class="result-stat">
+                            <div class="stat-name">Matchs à jouer (minimum)</div>
+                            <div class="stat-value">14</div>
+                        </div>
+                        <div class="result-stat">
+                            <div class="stat-name">Places disponibles pour la confédération</div>
+                            <div class="stat-value">5 sur 54 pays</div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-heading">Probabilités statistiques</div>
+                        <p class="result-explanation">Sur la base des performances historiques et du système actuel, voici les probabilités estimées de qualification.</p>
+                        
+                        <div class="result-stat">
+                            <div class="stat-name">Probabilité de qualification directe</div>
+                            <div class="stat-value">28%</div>
+                        </div>
+                        <div class="result-stat">
+                            <div class="stat-name">Comparaison: équipe européenne de même rang</div>
+                            <div class="stat-value">62%</div>
+                        </div>
+                        <div class="result-stat">
+                            <div class="stat-name">Facteur de difficulté</div>
+                            <div class="stat-value">2.2x plus difficile qu'en Europe</div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-heading">Défis spécifiques</div>
+                        <p class="result-explanation">Au-delà du système de qualification, voici les obstacles supplémentaires que le Sénégal doit surmonter.</p>
+                        
+                        <div class="result-stat">
+                            <div class="stat-name">Distances moyennes à parcourir</div>
+                            <div class="stat-value">3,200 km par match à l'extérieur</div>
+                        </div>
+                        <div class="result-stat">
+                            <div class="stat-name">Budget pour les qualifications</div>
+                            <div class="stat-value">Environ 2 millions €</div>
+                        </div>
+                        <div class="result-stat">
+                            <div class="stat-name">Infrastructures d'entraînement</div>
+                            <div class="stat-value">Limitées</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Préparation et ressources</h2>
+            <p>Les différences de moyens influencent directement la qualité de la préparation aux compétitions internationales.</p>
+            
+            <div class="resource-comparison">
+                <h3>Comparaison des ressources allouées à la préparation</h3>
+                <p>Les écarts en termes de ressources se traduisent par des opportunités inégales de préparation optimale.</p>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Pays</th>
+                            <th>Matchs amicaux par an</th>
+                            <th>Budget préparation</th>
+                            <th>Staff technique</th>
+                            <th>Infrastructures</th>
+                            <th>Analyse de données</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="country-group">Europe (Top 10)</td>
+                            <td>12-15</td>
+                            <td>5-8 M€</td>
+                            <td>20-30 personnes</td>
+                            <td>
+                                <div class="rating-stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="rating-stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="country-group">Amérique du Sud (Top 5)</td>
+                            <td>10-12</td>
+                            <td>3-5 M€</td>
+                            <td>15-20 personnes</td>
+                            <td>
+                                <div class="rating-stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="rating-stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="country-group">Asie (Top 5)</td>
+                            <td>8-10</td>
+                            <td>2-4 M€</td>
+                            <td>12-18 personnes</td>
+                            <td>
+                                <div class="rating-stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="rating-stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="country-group">Afrique (Top 5)</td>
+                            <td>6-8</td>
+                            <td>1-2 M€</td>
+                            <td>8-12 personnes</td>
+                            <td>
+                                <div class="rating-stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="rating-stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="country-group">CONCACAF (hors USA/Mexique)</td>
+                            <td>4-6</td>
+                            <td>0.5-1 M€</td>
+                            <td>5-10 personnes</td>
+                            <td>
+                                <div class="rating-stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="rating-stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="country-group">Océanie et petites nations</td>
+                            <td>2-4</td>
+                            <td>0.1-0.5 M€</td>
+                            <td>3-5 personnes</td>
+                            <td>
+                                <div class="rating-stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="rating-stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Défis administratifs</h2>
+            <p>Les contraintes de visa et les obstacles administratifs affectent disproportionnellement certains pays.</p>
+            
+            <div class="visa-issues">
+                <h3>Difficultés d'obtention de visas</h3>
+                <p>Les joueurs des pays en développement font face à des obstacles supplémentaires pour participer aux compétitions internationales.</p>
+                
+                <div class="visa-map">
+                    <!-- Carte simplifiée montrant la facilité d'obtention de visas -->
+                    <div class="map-legend">
+                        <div class="legend-item">
+                            <div class="legend-color ease-high"></div>
+                            <span>Facilité d'accès élevée</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color ease-medium"></div>
+                            <span>Facilité d'accès moyenne</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color ease-low"></div>
+                            <span>Facilité d'accès faible</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="visa-stories">
+                    <h3>Témoignages</h3>
+                    
+                    <div class="story-box">
+                        <div class="story-quote">
+                            <p>"Nous avons manqué un tournoi de qualification important parce que trois de nos joueurs clés n'ont pas obtenu leurs visas à temps. Malgré tous nos efforts et documents fournis, les délais administratifs ont été plus longs que prévu."</p>
+                        </div>
+                        <div class="story-source">
+                            <p>- Entraîneur, Équipe nationale du Mali</p>
+                        </div>
+                    </div>
+                    
+                    <div class="story-box">
+                        <div class="story-quote">
+                            <p>"Pour obtenir un visa, nos joueurs doivent parfois voyager dans un pays voisin où se trouve l'ambassade concernée. Cela implique des coûts supplémentaires et du temps que nos équipes européennes concurrentes n'ont pas à considérer."</p>
+                        </div>
+                        <div class="story-source">
+                            <p>- Directeur administratif, Fédération de football du Bénin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Évolution du classement FIFA</h2>
+            <p>Le système de classement peut perpétuer les inégalités existantes.</p>
+            
+            <div class="interactive-chart">
+                <h3>Analysez l'impact du système sur le classement</h3>
+                <p>Le graphique ci-dessous montre comment les opportunités de matchs amicaux et les systèmes de qualification influencent le classement FIFA.</p>
+                
+                <div class="chart-options">
+                    <div class="chart-option">
+                        <input type="radio" id="viewRanking" name="chartView" checked>
+                        <label for="viewRanking">Classement actuel</label>
+                    </div>
+                    <div class="chart-option">
+                        <input type="radio" id="viewFriendlies" name="chartView">
+                        <label for="viewFriendlies">Impact des matchs amicaux</label>
+                    </div>
+                    <div class="chart-option">
+                        <input type="radio" id="viewQualification" name="chartView">
+                        <label for="viewQualification">Impact des qualifications</label>
+                    </div>
+                    <div class="chart-option">
+                        <input type="radio" id="viewAlternative" name="chartView">
+                        <label for="viewAlternative">Classement alternatif équitable</label>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <!-- Ici, dans une implémentation réelle, vous intégreriez un graphique interactif -->
+                    <!-- Pour cet exemple, nous utilisons une image placeholder -->
+                    <img src="/api/placeholder/900/500" alt="Graphique interactif" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Un Même Ballon</h3>
+                    <p>Explorez les inégalités dans le monde du football et les initiatives qui cherchent à créer un terrain de jeu plus équitable pour tous.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                     <ul>
+                        <li><a href="Accueil.html">Accueil</a></li>
+                        <li><a href="Disparites_pays.html">Disparités</a></li>
+                        <li><a href="Formation_Jeunes .html">Formation</a></li>
+                        <li><a href="Grandes_Compétitions.html">Compétitions</a></li>
+                        <li><a href="Initiatives.html">Initiatives</a></li>
+                        <li><a href="Apropos.html">À propos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="#">Sources</a></li>
+                        <li><a href="#">Organisations</a></li>
+                        <li><a href="#">Statistiques</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Un Même Ballon. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/Javascript/competitions.js"></script>
+</body>
+</html>
