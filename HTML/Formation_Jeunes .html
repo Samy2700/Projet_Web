@@ -43,80 +43,21 @@
 
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Carte des académies</h2>
-            <p>Découvrez les principales académies de football dans le monde et leur niveau d'équipement.</p>
+            <h2 class="section-title">Défis de la formation</h2>
+            <p>Les obstacles que rencontrent les jeunes talents selon leur région d'origine.</p>
             
-            <div class="academies-map">
-                <div class="map-container">
-                    <!-- Points sur la carte représentant les académies -->
-                    <div class="map-point" style="top: 30%; left: 48%;" data-academy="clairefontaine"></div>
-                    <div class="map-point" style="top: 32%; left: 45%;" data-academy="lamasiabarcelone"></div>
-                    <div class="map-point premium" style="top: 32%; left: 52%;" data-academy="juventus"></div>
-                    <div class="map-point" style="top: 28%; left: 49%;" data-academy="ajax"></div>
-                    <div class="map-point" style="top: 27%; left: 44%;" data-academy="manchesterunited"></div>
-                    <div class="map-point" style="top: 40%; left: 38%;" data-academy="aspire"></div>
-                    <div class="map-point" style="top: 55%; left: 42%;" data-academy="diambarsenegal"></div>
-                    <div class="map-point" style="top: 55%; left: 57%;" data-academy="jomokenya"></div>
-                    <div class="map-point" style="top: 45%; left: 85%;" data-academy="jleague"></div>
-                    <div class="map-point" style="top: 37%; left: 14%;" data-academy="monterrey"></div>
-                    <div class="map-point premium" style="top: 65%; left: 30%;" data-academy="flamengo"></div>
-                    
-                    <!-- Popup d'information sur l'académie -->
-                    <div class="academy-popup" id="academyPopup">
-                        <div class="popup-header">
-                            <h3 class="popup-title">Clairefontaine</h3>
-                            <button class="popup-close">&times;</button>
-                        </div>
-                        <div class="popup-content">
-                            <div class="popup-image">
-                                <img src="/api/placeholder/400/200" alt="Académie">
-                            </div>
-                            <div class="popup-info">
-                                <p><strong>Pays:</strong> France</p>
-                                <p><strong>Fondation:</strong> 1988</p>
-                                <p><strong>Type:</strong> Centre National</p>
-                                <p><strong>Budget annuel:</strong> 15 millions €</p>
-                            </div>
-                            <div class="popup-description">
-                                <p>L'INF Clairefontaine est le centre technique national du football français. Il accueille les meilleurs jeunes talents du pays et leur offre un encadrement de haut niveau pour développer leur potentiel.</p>
-                            </div>
-                            <div class="success-stories">
-                                <p>Joueurs formés: Kylian Mbappé, Thierry Henry, Nicolas Anelka, Louis Saha...</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Contrôles de carte -->
-                    <div class="map-controls">
-                        <div class="map-filter">
-                            <label>
-                                <input type="checkbox" checked id="showAll">
-                                <span>Toutes les académies</span>
-                            </label>
-                        </div>
-                        <div class="map-filter">
-                            <label>
-                                <input type="checkbox" checked id="showPremium">
-                                <span>Académies premium</span>
-                            </label>
-                        </div>
-                        <div class="map-filter">
-                            <label>
-                                <input type="checkbox" checked id="showStandard">
-                                <span>Académies standard</span>
-                            </label>
-                        </div>
-                        <div class="map-legend">
-                            <div class="legend-item">
-                                <div class="legend-color standard"></div>
-                                <span>Académie standard</span>
-                            </div>
-                            <div class="legend-item">
-                                <div class="legend-color premium"></div>
-                                <span>Académie premium</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">2%</div>
+                    <div class="stat-text">Des jeunes africains accèdent aux académies européennes</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-text">Des talents restent non détectés en Afrique</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15×</div>
+                    <div class="stat-text">Plus de centres de formation en Europe qu'en Afrique</div>
                 </div>
             </div>
         </div>
@@ -124,35 +65,87 @@
 
     <section class="section section-alt">
         <div class="container">
-            <h2 class="section-title">Histoires de réussite</h2>
-            <p>Des parcours inspirants de jeunes talents qui ont réussi malgré les obstacles.</p>
+            <h2 class="section-title">Histoire de réussite</h2>
+            <p>Un parcours inspirant qui illustre les défis et la détermination nécessaires.</p>
             
-            <div class="success-story">
-                <div class="story-image">
-                    <img src="/api/placeholder/400/500" alt="Portrait de joueur">
+            <div class="page-card">
+                <div class="page-image">
+                    <img src="/img/Sadio_Mane.jpg" alt="Sadio Mané">
                 </div>
-                <div class="story-content">
-                    <h3 class="story-title">Sadio Mané</h3>
-                    <div class="story-quote">
-                        <p>"J'ai dû fuir ma maison pour poursuivre mon rêve. Mes parents ne voulaient pas que je joue au football. Je n'avais pas de chaussures, pas d'équipement, mais j'avais la détermination."</p>
+                <div class="page-content">
+                    <h3 class="page-title">Sadio Mané - Sénégal</h3>
+                    <p class="page-description">
+                        <strong>"J'ai dû fuir ma maison pour poursuivre mon rêve. Mes parents ne voulaient pas que je joue au football. Je n'avais pas de chaussures, pas d'équipement, mais j'avais la détermination."</strong>
+                    </p>
+                    <p class="page-description">
+                        Né dans un petit village du Sénégal, Sadio Mané a dû surmonter d'immenses obstacles pour devenir footballeur professionnel. Sans accès à une académie structurée, il a été repéré lors d'un tournoi local par un recruteur qui l'a fait venir en France.
+                    </p>
+                    <p class="page-description">
+                        Aujourd'hui, il investit dans son pays d'origine, construisant des écoles et des infrastructures sportives pour que les prochains talents aient plus de facilité à émerger.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Impact de Sadio Mané</h2>
+            <p>Les contributions concrètes du joueur pour réduire les inégalités au Sénégal.</p>
+            
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">16</div>
+                    <div class="stat-text">Âge de son départ du Sénégal</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2</div>
+                    <div class="stat-text">Académies de football créées</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4M€</div>
+                    <div class="stat-text">Investis dans l'éducation au Sénégal</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Systèmes de formation</h2>
+            <p>Comparaison des approches de formation entre différentes régions du monde.</p>
+            
+            <div class="pages-grid">
+                <div class="page-card">
+                    <div class="page-image">
+                        <img src="/img/La_Masia.jpg" alt="Formation Europe">
                     </div>
-                    <div class="story-details">
-                        <p>Né dans un petit village du Sénégal, Sadio Mané a dû surmonter d'immenses obstacles pour devenir footballeur professionnel. Sans accès à une académie structurée ou à un soutien institutionnel, il a été repéré lors d'un tournoi local par un recruteur qui l'a fait venir en France.</p>
-                        <p>Aujourd'hui, il est considéré comme l'un des meilleurs joueurs du monde et sert d'inspiration à des milliers de jeunes au Sénégal et en Afrique. Il investit dans son pays d'origine, construisant des écoles et des infrastructures sportives pour que les prochains talents aient plus de facilité à émerger.</p>
+                    <div class="page-content">
+                        <h3 class="page-title">Europe</h3>
+                        <p class="page-description">Académies structurées, détection précoce dès 6 ans, suivi médical complet, équipements de pointe, bourses d'études intégrées.</p>
+                        <a href="https://www.fcbarcelona.fr/fr/club/facilities/la-masia" class="page-link">En savoir plus</a>
                     </div>
-                    <div class="story-stats">
-                        <div class="stat-box">
-                            <div class="number">16</div>
-                            <div class="label">Âge du départ</div>
-                        </div>
-                        <div class="stat-box">
-                            <div class="number">2</div>
-                            <div class="label">Académies créées</div>
-                        </div>
-                        <div class="stat-box">
-                            <div class="number">4M€</div>
-                            <div class="label">Investis au Sénégal</div>
-                        </div>
+                </div>
+
+                <div class="page-card">
+                    <div class="page-image">
+                        <img src="/img/Santos_Soccer_Academie.jpg" alt="Formation Amérique du Sud">
+                    </div>
+                    <div class="page-content">
+                        <h3 class="page-title">Amérique du Sud</h3>
+                        <p class="page-description">Football de rue, talent naturel, clubs professionnels investissent dans la jeunesse, mais inégalités sociales importantes.</p>
+                        <a href="https://www.santos-fc.com/" class="page-link">En savoir plus</a>
+                    </div>
+                </div>
+
+                <div class="page-card">
+                    <div class="page-image">
+                        <img src="/img/Centre_Afrique.jpg" alt="Formation Afrique">
+                    </div>
+                    <div class="page-content">
+                        <h3 class="page-title">Afrique</h3>
+                        <p class="page-description">Talent exceptionnel, manque d'infrastructures, détection limitée, migration nécessaire pour évoluer au plus haut niveau.</p>
+                        <a href="https://www.afrik-foot.com/tour-dafrique-des-academies-de-football-les-historiques" class="page-link">En savoir plus</a>
                     </div>
                 </div>
             </div>
@@ -161,115 +154,78 @@
 
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Comparaison des systèmes de formation</h2>
-            <p>Les différences entre les systèmes de formation en Europe et en Afrique.</p>
+            <h2 class="section-title">Quiz : Formation des jeunes</h2>
+            <p>Testez vos connaissances sur les systèmes de formation dans le football mondial.</p>
             
-            <div class="comparison-container">
-                <div class="comparison-slider">
-                    <div class="comparison-after">
-                        <div class="comparison-after-img"></div>
-                        <div class="comparison-label after-label">Europe</div>
-                    </div>
-                    <div class="comparison-before">
-                        <div class="comparison-before-img"></div>
-                        <div class="comparison-label before-label">Afrique</div>
-                    </div>
-                    <div class="comparison-handle"></div>
-                </div>
-                
-                <div class="comparison-info">
-                    <div class="comparison-col col-1">
-                        <h3>Formation en Europe</h3>
-                        <p>Les académies européennes bénéficient de moyens considérables et d'une structure professionnelle complète.</p>
-                        <ul>
-                            <li>Infrastructures modernes et entretenues</li>
-                            <li>Suivi médical et nutritionnel personnalisé</li>
-                            <li>Staff technique complet et qualifié</li>
-                            <li>Encadrement scolaire intégré</li>
-                            <li>Compétitions régulières de haut niveau</li>
-                            <li>Visibilité médiatique et scouting structuré</li>
-                        </ul>
-                    </div>
-                    <div class="comparison-col col-2">
-                        <h3>Formation en Afrique</h3>
-                        <p>Les académies africaines font face à de nombreux défis, malgré un formidable vivier de talents.</p>
-                        <ul>
-                            <li>Infrastructures limitées et difficiles à entretenir</li>
-                            <li>Suivi médical et nutritionnel minimal</li>
-                            <li>Manque d'encadrement technique qualifié</li>
-                            <li>Difficultés à concilier études et football</li>
-                            <li>Manque de compétitions régulières</li>
-                            <li>Visibilité réduite pour les recruteurs</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Partagez votre expérience</h2>
-            <p>Vous avez vécu ou observé les inégalités dans la formation des jeunes footballeurs ? Partagez votre histoire.</p>
-            
-            <form class="share-story-form" id="shareStoryForm">
+            <form class="contact-form" id="formationQuiz">
                 <div class="form-intro">
-                    <h3>Votre témoignage</h3>
-                    <p>Vos récits nous aident à documenter et à sensibiliser sur les disparités dans le football. Tous les témoignages sont précieux.</p>
+                    <h3>Questions sur la formation</h3>
+                    <p>Répondez aux questions suivantes pour évaluer votre compréhension des enjeux de formation dans le football.</p>
                 </div>
                 
                 <div class="form-group">
-                    <label for="name">Votre nom (ou pseudonyme)</label>
-                    <input type="text" class="form-control" id="name" required>
+                    <label><strong>Question 1 : À quel âge commence généralement la détection de talents en Europe ?</strong></label>
+                    <div style="margin-top: 10px;">
+                        <label><input type="radio" name="q1" value="a"> 4-5 ans</label><br>
+                        <label><input type="radio" name="q1" value="b"> 6-8 ans</label><br>
+                        <label><input type="radio" name="q1" value="c"> 10-12 ans</label><br>
+                        <label><input type="radio" name="q1" value="d"> 14-16 ans</label>
+                    </div>
                 </div>
                 
                 <div class="form-group">
-                    <label for="country">Pays concerné</label>
-                    <input type="text" class="form-control" id="country" required>
+                    <label><strong>Question 2 : Quel pourcentage de jeunes africains talentueux restent non détectés ?</strong></label>
+                    <div style="margin-top: 10px;">
+                        <label><input type="radio" name="q2" value="a"> 45%</label><br>
+                        <label><input type="radio" name="q2" value="b"> 60%</label><br>
+                        <label><input type="radio" name="q2" value="c"> 75%</label><br>
+                        <label><input type="radio" name="q2" value="d"> 85%</label>
+                    </div>
                 </div>
                 
                 <div class="form-group">
-                    <label for="role">Votre rôle</label>
-                    <select class="form-control" id="role" required>
-                        <option value="">Sélectionnez votre rôle</option>
-                        <option value="player">Joueur/Joueuse</option>
-                        <option value="coach">Entraîneur</option>
-                        <option value="parent">Parent</option>
-                        <option value="observer">Observateur</option>
-                        <option value="other">Autre</option>
-                    </select>
+                    <label><strong>Question 3 : Combien l'Europe a-t-elle de centres de formation comparé à l'Afrique ?</strong></label>
+                    <div style="margin-top: 10px;">
+                        <label><input type="radio" name="q3" value="a"> 5 fois plus</label><br>
+                        <label><input type="radio" name="q3" value="b"> 10 fois plus</label><br>
+                        <label><input type="radio" name="q3" value="c"> 15 fois plus</label><br>
+                        <label><input type="radio" name="q3" value="d"> 20 fois plus</label>
+                    </div>
                 </div>
                 
                 <div class="form-group">
-                    <label for="story">Votre histoire</label>
-                    <textarea class="form-control" id="story" rows="5" required></textarea>
-                    <div class="form-note">Décrivez votre expérience, les défis rencontrés, les inégalités observées...</div>
+                    <label><strong>Question 4 : À quel âge Sadio Mané a-t-il quitté le Sénégal pour l'Europe ?</strong></label>
+                    <div style="margin-top: 10px;">
+                        <label><input type="radio" name="q4" value="a"> 14 ans</label><br>
+                        <label><input type="radio" name="q4" value="b"> 16 ans</label><br>
+                        <label><input type="radio" name="q4" value="c"> 18 ans</label><br>
+                        <label><input type="radio" name="q4" value="d"> 20 ans</label>
+                    </div>
                 </div>
                 
                 <div class="form-group">
-                    <label for="challenges">Principaux défis rencontrés</label>
-                    <select class="form-control" id="challenges" multiple>
-                        <option value="infrastructure">Manque d'infrastructures</option>
-                        <option value="equipment">Manque d'équipement</option>
-                        <option value="coaching">Manque d'encadrement technique</option>
-                        <option value="medical">Manque de suivi médical</option>
-                        <option value="education">Difficultés à concilier études et sport</option>
-                        <option value="visibility">Manque de visibilité/détection</option>
-                        <option value="financial">Obstacles financiers</option>
-                    </select>
-                    <div class="form-note">Maintenez Ctrl (ou Cmd) pour sélectionner plusieurs options</div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email (facultatif)</label>
-                    <input type="email" class="form-control" id="email">
-                    <div class="form-note">Pour être éventuellement recontacté pour un témoignage plus complet</div>
+                    <label><strong>Question 5 : Quel est le principal avantage des académies européennes ?</strong></label>
+                    <div style="margin-top: 10px;">
+                        <label><input type="radio" name="q5" value="a"> Seulement les équipements</label><br>
+                        <label><input type="radio" name="q5" value="b"> Approche holistique (sport + éducation + médical)</label><br>
+                        <label><input type="radio" name="q5" value="c"> Seulement l'entraînement technique</label><br>
+                        <label><input type="radio" name="q5" value="d"> Seulement les bourses d'études</label>
+                    </div>
                 </div>
                 
                 <div class="form-actions">
-                    <button type="submit" class="btn">Soumettre mon témoignage</button>
+                    <button type="submit" class="btn">Voir mes résultats</button>
                 </div>
             </form>
+
+            <div class="comparison-results" id="quizResults" style="display: none;">
+                <div class="country-card">
+                    <div class="country-header">Résultats du Quiz</div>
+                    <div class="country-body" id="answersDisplay">
+                        <!-- Les réponses seront affichées ici par JavaScript -->
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

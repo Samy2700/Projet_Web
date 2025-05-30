@@ -1,221 +1,185 @@
-const mapPoints = document.querySelectorAll('.map-point');
-const academyPopup = document.getElementById('academyPopup');
-const popupClose = document.querySelector('.popup-close');
-
-
-const academies = {
-    clairefontaine: {
-        name: "INF Clairefontaine",
-        country: " France",
-        foundation: " 1988",
-        type: " Centre National",
-        budget: " 15 millions €",
-        description: "L'INF Clairefontaine est le centre technique national du football français. Il accueille les meilleurs jeunes talents du pays et leur offre un encadrement de haut niveau pour développer leur potentiel.",
-        success: "Joueurs formés: Kylian Mbappé, Thierry Henry, Nicolas Anelka, Louis Saha..."
-    },
-    lamasiabarcelone: {
-        name: "La Masia - FC Barcelone",
-        country: " Espagne",
-        foundation: " 1979",
-        type: " Club",
-        budget: " 20 millions €",
-        description: "La Masia est l'une des académies les plus réputées au monde, connue pour son style de jeu distinctif et sa philosophie de formation. Elle a produit certains des plus grands joueurs de l'histoire moderne.",
-        success: "Joueurs formés: Lionel Messi, Xavi Hernández, Andrés Iniesta, Carles Puyol..."
-    },
-    juventus: {
-        name: "Juventus Academy",
-        country: " Italie",
-        foundation: " 1982",
-        type: " Club Premium",
-        budget: " 18 millions €",
-        description: "L'académie de la Juventus est reconnue pour sa rigueur tactique et son excellence défensive. Elle dispose d'installations ultramodernes et d'un staff technique de haut niveau.",
-        success: "Joueurs formés: Alessandro Del Piero, Claudio Marchisio, Paolo Montero..."
-    },
-    ajax: {
-        name: "Ajax Academy",
-        country: " Pays-Bas",
-        foundation: " 1900",
-        type: " Club",
-        budget: " 12 millions €",
-        description: "Peut-être la plus célèbre académie au monde, l'Ajax est réputée pour sa philosophie de jeu offensive et sa capacité à produire des talents techniques exceptionnels.",
-        success: "Joueurs formés: Johan Cruyff, Dennis Bergkamp, Edgar Davids, Wesley Sneijder..."
-    },
-    diambarsenegal: {
-        name: "Académie Diambars",
-        country: " Sénégal",
-        foundation: " 2003",
-        type: " ONG",
-        budget: " 1.5 millions €",
-        description: "Fondée par Patrick Vieira et d'autres anciens joueurs, Diambars combine éducation scolaire et formation footballistique de qualité pour offrir des opportunités aux jeunes talents sénégalais.",
-        success: "Joueurs formés: Idrissa Gueye, Kara Mbodji, Saliou Ciss..."
-    },
-    jomokenya: {
-        name: "JMJ Academy",
-        country: " Kenya",
-        foundation: " 2011",
-        type: " Privée",
-        budget: " 0.8 millions €",
-        description: "Une des rares académies structurées en Afrique de l'Est, la JMJ Academy tente de pallier le manque d'infrastructures dans la région tout en offrant une éducation complète.",
-        success: "Joueurs formés: Michael Olunga, Eric Johanna, plusieurs joueurs en ligue locale..."
-    }
+const quizData = {
+    questions: [
+        {
+            id: 'q1',
+            question: 'À quel âge commence généralement la détection de talents en Europe ?',
+            options: {
+                a: '4-5 ans',
+                b: '6-8 ans',
+                c: '10-12 ans',
+                d: '14-16 ans'
+            },
+            correct: 'b',
+            explanation: 'En Europe, la détection précoce commence généralement entre 6 et 8 ans dans les académies structurées.'
+        },
+        {
+            id: 'q2',
+            question: 'Quel pourcentage de jeunes africains talentueux restent non détectés ?',
+            options: {
+                a: '45%',
+                b: '60%',
+                c: '75%',
+                d: '85%'
+            },
+            correct: 'd',
+            explanation: '85% des talents africains restent non détectés à cause du manque d\'infrastructures et de systèmes de détection.'
+        },
+        {
+            id: 'q3',
+            question: 'Combien l\'Europe a-t-elle de centres de formation comparé à l\'Afrique ?',
+            options: {
+                a: '5 fois plus',
+                b: '10 fois plus',
+                c: '15 fois plus',
+                d: '20 fois plus'
+            },
+            correct: 'c',
+            explanation: 'L\'Europe dispose de 15 fois plus de centres de formation que l\'Afrique, illustrant les inégalités d\'infrastructures.'
+        },
+        {
+            id: 'q4',
+            question: 'À quel âge Sadio Mané a-t-il quitté le Sénégal pour l\'Europe ?',
+            options: {
+                a: '14 ans',
+                b: '16 ans',
+                c: '18 ans',
+                d: '20 ans'
+            },
+            correct: 'b',
+            explanation: 'Sadio Mané a quitté le Sénégal à 16 ans pour poursuivre sa carrière en France.'
+        },
+        {
+            id: 'q5',
+            question: 'Quel est le principal avantage des académies européennes ?',
+            options: {
+                a: 'Seulement les équipements',
+                b: 'Approche holistique (sport + éducation + médical)',
+                c: 'Seulement l\'entraînement technique',
+                d: 'Seulement les bourses d\'études'
+            },
+            correct: 'b',
+            explanation: 'Les académies européennes offrent une approche holistique combinant formation sportive, éducation et suivi médical.'
+        }
+    ]
 };
 
+function calculateScore(userAnswers) {
+    let score = 0;
+    const results = [];
 
-if (mapPoints.length) {
-    const popupTitle = document.querySelector('.popup-title');
-    const popupImage = document.querySelector('.popup-image img');
-    const popupCountry = document.querySelector('.popup-info p:nth-child(1) strong').nextSibling;
-    const popupFoundation = document.querySelector('.popup-info p:nth-child(2) strong').nextSibling;
-    const popupType = document.querySelector('.popup-info p:nth-child(3) strong').nextSibling;
-    const popupBudget = document.querySelector('.popup-info p:nth-child(4) strong').nextSibling;
-    const popupDescription = document.querySelector('.popup-description p');
-    const popupSuccess = document.querySelector('.success-stories p');
-    
-    mapPoints.forEach(point => {
-        point.addEventListener('click', () => {
-            const academyId = point.getAttribute('data-academy');
-            if (academies[academyId]) {
-                const academy = academies[academyId];
-                
-                
-                popupTitle.textContent = academy.name;
-                popupCountry.textContent = academy.country;
-                popupFoundation.textContent = academy.foundation;
-                popupType.textContent = academy.type;
-                popupBudget.textContent = academy.budget;
-                popupDescription.textContent = academy.description;
-                popupSuccess.textContent = academy.success;
-                
-            
-                academyPopup.classList.add('active');
-            }
+    quizData.questions.forEach(question => {
+        const userAnswer = userAnswers[question.id];
+        const isCorrect = userAnswer === question.correct;
+
+        if (isCorrect) {
+            score++;
+        }
+
+        results.push({
+            question: question.question,
+            userAnswer: userAnswer ? question.options[userAnswer] : 'Non répondu',
+            correctAnswer: question.options[question.correct],
+            isCorrect: isCorrect,
+            explanation: question.explanation
         });
     });
+
+    return { score, total: quizData.questions.length, results };
 }
 
+function displayResults(results) {
+    const answersDisplay = document.getElementById('answersDisplay');
+    let html = '';
 
-if (popupClose) {
-    popupClose.addEventListener('click', () => {
-        academyPopup.classList.remove('active');
+    results.results.forEach((result, index) => {
+        const statusClass = result.isCorrect ? 'high' : 'low';
+        const statusText = result.isCorrect ? 'Correct' : 'Incorrect';
+
+        html += `
+            <div class="stat-row">
+                <div class="stat-label">Question ${index + 1}</div>
+                <div class="stat-value ${statusClass}">${statusText}</div>
+            </div>
+            <div style="margin-bottom: 15px; padding: 10px; background: ${result.isCorrect ? '#e8f5e8' : '#ffeaea'}; border-radius: 5px;">
+                <p><strong>Votre réponse :</strong> ${result.userAnswer}</p>
+                <p><strong>Bonne réponse :</strong> ${result.correctAnswer}</p>
+                <p><strong>Explication :</strong> ${result.explanation}</p>
+            </div>
+        `;
     });
+
+    answersDisplay.innerHTML = html;
 }
 
+function getScoreMessage(score, total) {
+    const percentage = (score / total) * 100;
 
-const showAllCheckbox = document.getElementById('showAll');
-const showPremiumCheckbox = document.getElementById('showPremium');
-const showStandardCheckbox = document.getElementById('showStandard');
+    if (percentage === 100) {
+        return 'Parfait ! Vous maîtrisez parfaitement les enjeux de formation dans le football mondial !';
+    } else if (percentage >= 80) {
+        return 'Excellent ! Vous avez une très bonne compréhension des inégalités de formation.';
+    } else if (percentage >= 60) {
+        return 'Bien ! Vous connaissez les bases, mais il y a encore des aspects à approfondir.';
+    } else if (percentage >= 40) {
+        return 'Passable. Nous vous encourageons à relire le contenu pour mieux comprendre les enjeux.';
+    } else {
+        return 'Il faut approfondir vos connaissances sur les inégalités dans la formation footballistique.';
+    }
+}
 
-function updateMapPoints() {
-    if (!showAllCheckbox || !showPremiumCheckbox || !showStandardCheckbox) return;
-    
-    const showAll = showAllCheckbox.checked;
-    const showPremium = showPremiumCheckbox.checked;
-    const showStandard = showStandardCheckbox.checked;
-    
-    mapPoints.forEach(point => {
-        if (showAll) {
-            point.style.display = 'block';
-        } else {
-            if (point.classList.contains('premium') && showPremium) {
-                point.style.display = 'block';
-            } else if (!point.classList.contains('premium') && showStandard) {
-                point.style.display = 'block';
-            } else {
-                point.style.display = 'none';
+document.addEventListener('DOMContentLoaded', function() {
+    const quizForm = document.getElementById('formationQuiz');
+    const resultsDiv = document.getElementById('quizResults');
+
+    if (quizForm) {
+        quizForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(quizForm);
+            const userAnswers = {};
+
+            quizData.questions.forEach(question => {
+                userAnswers[question.id] = formData.get(question.id);
+            });
+
+            const unanswered = quizData.questions.filter(q => !userAnswers[q.id]);
+
+            if (unanswered.length > 0) {
+                alert('Veuillez répondre à toutes les questions avant de soumettre le quiz.');
+                return;
             }
-        }
-    });
+
+            const results = calculateScore(userAnswers);
+            const message = getScoreMessage(results.score, results.total);
+            alert(`RÉSULTATS DU QUIZ
+
+Votre Score : ${results.score}/${results.total} (${Math.round((results.score/results.total)*100)}%)
+
+${message}
+
+Les réponses détaillées s'affichent ci-dessous.`);
+
+            displayResults(results);
+            resultsDiv.style.display = 'block';
+            resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    }
+});
+
+function resetQuiz() {
+    const quizForm = document.getElementById('formationQuiz');
+    const resultsDiv = document.getElementById('quizResults');
+
+    if (quizForm) {
+        quizForm.reset();
+    }
+
+    if (resultsDiv) {
+        resultsDiv.style.display = 'none';
+    }
 }
 
-if (showAllCheckbox && showPremiumCheckbox && showStandardCheckbox) {
-    showAllCheckbox.addEventListener('change', () => {
-        if (showAllCheckbox.checked) {
-            showPremiumCheckbox.checked = true;
-            showStandardCheckbox.checked = true;
-        }
-        updateMapPoints();
-    });
-
-    showPremiumCheckbox.addEventListener('change', () => {
-        showAllCheckbox.checked = showPremiumCheckbox.checked && showStandardCheckbox.checked;
-        updateMapPoints();
-    });
-
-    showStandardCheckbox.addEventListener('change', () => {
-        showAllCheckbox.checked = showPremiumCheckbox.checked && showStandardCheckbox.checked;
-        updateMapPoints();
-    });
-}
-
-
-const slider = document.querySelector('.comparison-slider');
-const beforeDiv = document.querySelector('.comparison-before');
-const handle = document.querySelector('.comparison-handle');
-let isDown = false;
-
-if (slider && beforeDiv && handle) {
-    handle.addEventListener('mousedown', () => {
-        isDown = true;
-    });
-
-    window.addEventListener('mouseup', () => {
-        isDown = false;
-    });
-
-    window.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        
-        const sliderRect = slider.getBoundingClientRect();
-        const x = e.clientX - sliderRect.left;
-        const percent = (x / sliderRect.width) * 100;
-        
-        if (percent >= 0 && percent <= 100) {
-            beforeDiv.style.width = `${percent}%`;
-            handle.style.left = `${percent}%`;
-        }
-    });
-
-    
-    handle.addEventListener('touchstart', () => {
-        isDown = true;
-    });
-
-    window.addEventListener('touchend', () => {
-        isDown = false;
-    });
-
-    window.addEventListener('touchmove', (e) => {
-        if (!isDown) return;
-        
-        const touch = e.touches[0];
-        const sliderRect = slider.getBoundingClientRect();
-        const x = touch.clientX - sliderRect.left;
-        const percent = (x / sliderRect.width) * 100;
-        
-        if (percent >= 0 && percent <= 100) {
-            beforeDiv.style.width = `${percent}%`;
-            handle.style.left = `${percent}%`;
-        }
-    });
-}
-
-
-const shareStoryForm = document.getElementById('shareStoryForm');
-
-if (shareStoryForm) {
-    shareStoryForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-    
-        
-
-        const formData = new FormData(shareStoryForm);
-        console.log('Formulaire soumis avec les données suivantes:');
-        for (let pair of formData.entries()) {
-            console.log(pair[0] + ': ' + pair[1]);
-        }
-        
-        
-        shareStoryForm.reset();
-        alert('Merci pour votre témoignage ! Il sera examiné et publié prochainement.');
-    });
-}
+window.FormationQuiz = {
+    resetQuiz,
+    quizData
+};
